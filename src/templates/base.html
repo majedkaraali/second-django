@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'snipits/header.html' %}
+
+
+    </head>
+
+    <body> 
+        <style type="text/css">
+            html, body {
+                height: 100%;
+            }
+            
+            .main {
+                min-height: 100%;
+            }
+        </style>
+        <div class="main">
+        {% block content %}
+
+        {% endblock content %}
+        </div>
+        {% include 'snipits/footer.html' %}
+    </body>
+    
+
+
+    
+    </html>

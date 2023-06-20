@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+
+  <style>
+    /* Add your custom CSS styles here */
+
+    /* Set full-width image as background */
+    .hero-image {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      color: #fff;
+      margin-left: 200px;
+      font-size: 2em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .left-element,
+    .right-element {
+      flex: 1;
+      padding: 20px;
+      font-size: 4em;
+      
+    }
+
+    .right-element2{
+      flex: 1;
+      padding: 20px;
+      font-size: 1.8em;
+      
+    }
+
+    .text {
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    
+  </style>
+
+
+{% load static %}
+<body>
+  <div class="hero-image">
+    <!-- Full-size image -->
+    <img src="{% static 'first.jpg' %}" alt="Hero Image">
+    <div class="hero-content">
+      <h1>Young Informaticians</h1>
+      <p>The community of informatics running beyond the age.</p>
+    </div>
+  </div>
+
+  <!-- Second div -->
+  <div class="container">
+    <div class="left-element">
+      <p>Technology, Information and Internet</p>
+    </div>
+    <div class="right-element">
+      <img src="{% static 'int3.jpg' %}" alt="Image Description">
+    </div>
+  </div>
+
+  <!-- Third div -->
+  <div class="container">
+
+    <div class="right-element">
+        <img src="{% static 'int2.jpg' %}" alt="Image Description">
+    </div>
+    <div class="left-element">
+        <p>Future Of Work
+      </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fourth div -->
+  <div class="container">
+    <div class="left-element">
+      <p>What The Profits From This Technologies?</p>
+    </div>
+    <div class="right-element2">
+      <div class="text">
+        <p>Communication,Access to Information,Business and Commerce,Education and Learning,Efficiency and Productivity
+            ,Entertainment and Media,Research and Innovation. That What We Profit Frome The Technologies
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+{% endblock content %}

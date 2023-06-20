@@ -1,0 +1,79 @@
+<style>
+    /* Replace the following with your preferred CSS styling for the header */
+    .header .logo {
+      
+        float: left;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin-top: -25px;
+  
+    }
+    
+    .header {
+        background-color: #000000;
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+        text-overflow: inherit;
+    }
+
+    .header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-right: 75px;
+ 
+    }
+
+    .header li {
+        margin: 0 10px;
+        font-size: 1.4em; /* Set the initial font size */
+        transition: font-size 0.3s; /* Add a smooth transition effect */
+    }
+
+    .header .logo-text {
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+    .header a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .header a:hover {
+        color: #fdee20; /* Change the color on hover if desired */
+    }
+   .header .logo-text {
+    float: left;
+    display: flex;
+    }
+    .header li:not(:last-child) {
+        margin-right: 100px; /* Add space between the links */
+    }
+
+    
+
+</style>
+
+<header class="header">
+    <div class="logo">
+        {% load static %}
+        <img src="{% static 'logo9.png' %}" alt="Logo" alt="Logo">
+    </div>
+   
+    <nav>
+        <ul>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'team' %}">Team</a></li>
+            
+        </ul>
+    </nav>
+ 
+</header>
+
